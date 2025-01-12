@@ -12,7 +12,6 @@
 
             #endregion
 
-
             #region Majority Element 169
             //int[] nums = [3, 2, 3];
             //int result=MajorityElement_169.MajorityElement(nums);
@@ -20,6 +19,8 @@
             //Console.WriteLine(result);
 
             #endregion
+
+
 
         }
     }
