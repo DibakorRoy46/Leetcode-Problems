@@ -20,6 +20,19 @@
 
             #endregion
 
+            #region Remove Duplicates from Sorted Array 26
+
+            //int[] nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
+            //Console.WriteLine(RemoveDuplicate_26.RemoveDuplicates(nums));
+
+            #endregion
+
+            #region 121. Best Time to Buy and Sell Stock
+
+            int[] nums = [7, 1, 5, 3, 6, 4];
+            Console.WriteLine(BestTimeBuySellStock_121.MaxProfit(nums));
+
+            #endregion
 
 
         }
