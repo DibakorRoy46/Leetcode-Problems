@@ -49,7 +49,18 @@
 
             #endregion
 
+            #region 238. Product of Array Except Self
 
+            int[] nums = [1, 2, 3, 4];
+            //int[] nums = [-1, 1, 0, -3, 3];
+            var result=ProductArrayExceptSelf_238.ProductExceptSelf(nums);
+
+            foreach (int i in result)
+            {
+                Console.WriteLine(i);            
+            }
+
+            #endregion
         }
 
     }
