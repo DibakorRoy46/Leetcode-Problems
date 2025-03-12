@@ -84,14 +84,21 @@
 
             #region Linear Search
 
-            int[] nums = { 2, 3, 4, 5, 1, 47, 84 };
-            int target = 4;
+            //int[] nums = { 2, 3, 4, 5, 1, 47, 84 };
+            //int target = 4;
 
-            Console.WriteLine(LinearSearch.FindIndex(nums, target));    
+            //Console.WriteLine(LinearSearch.FindIndex(nums, target));
 
             #endregion
 
+            #region Binary Search
 
+            int[] nums = { 2, 3, 4, 5, 7,10,56,99};
+            int target = 4;
+
+            Console.WriteLine(BinarySearch.FindIndex(nums,target));
+
+            #endregion
         }
 
     }
