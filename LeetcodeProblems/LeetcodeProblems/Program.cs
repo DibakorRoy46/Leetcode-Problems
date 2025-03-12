@@ -64,11 +64,34 @@
 
             #region 217. Contains Duplicate
 
-            int[] nums = { 1, 2, 3, 4, 5, 6, 6 };
+            //int[] nums = { 1, 2, 3, 4, 5, 6, 6 };
 
-            Console.WriteLine(ContainsDuplicate_217.ContainsDuplicate(nums));
+            //Console.WriteLine(ContainsDuplicate_217.ContainsDuplicate(nums));
 
             #endregion
+
+            #region 242. Valid Anagram
+
+
+            #endregion
+
+            #region 69. Sqrt(x)
+
+            //int number = 8;
+            //Console.WriteLine(Sqrt_x__69.MySqrt(number));
+
+            #endregion
+
+            #region Linear Search
+
+            int[] nums = { 2, 3, 4, 5, 1, 47, 84 };
+            int target = 4;
+
+            Console.WriteLine(LinearSearch.FindIndex(nums, target));    
+
+            #endregion
+
+
         }
 
     }
