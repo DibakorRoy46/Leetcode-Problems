@@ -93,10 +93,20 @@
 
             #region Binary Search
 
-            int[] nums = { 2, 3, 4, 5, 7,10,56,99};
+            //int[] nums = { 2, 3, 4, 5, 7,10,56,99};
+            //int target = 4;
+
+            //Console.WriteLine(BinarySearch.FindIndex(nums,target));
+
+            #endregion
+
+            #region Order Agnostic Binary Search
+
+            //int[] nums = { 2, 3, 4, 5, 7, 10, 56, 99 };
+            int[] nums = { 99,56,10,7,5,4,3,2 };
             int target = 4;
 
-            Console.WriteLine(BinarySearch.FindIndex(nums,target));
+            Console.WriteLine(OrderAgnosticBinarySearch.FindIndex(nums, target));
 
             #endregion
         }
