@@ -112,11 +112,24 @@
 
             #region Count Digit
 
-            int number = 12;
-            Console.WriteLine(CountDigits.evenlyDivides(number));
+            //int number = 12;
+            //Console.WriteLine(CountDigits.evenlyDivides(number));
 
             #endregion
 
+
+            #region Recursive Binary Search
+
+
+            int[] nums = { 2, 3, 4, 5, 7, 10, 56, 99 };
+            int target = 4;
+
+            Console.WriteLine(BinarySearch.FindIndex(nums, target));
+
+
+            Console.WriteLine(RecursiveBinarySearch.BinarySearch(nums, target));
+
+            #endregion
 
         }
 
