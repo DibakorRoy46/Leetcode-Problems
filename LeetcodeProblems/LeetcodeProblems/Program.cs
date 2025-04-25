@@ -144,10 +144,17 @@
 
             #region Recursion Introduction
 
-            Console.WriteLine(Recursion.SumOnetoN(5));
-            Console.WriteLine(Recursion.ProductOnetoN(5));
+            //Console.WriteLine(Recursion.SumOnetoN(5));
+            //Console.WriteLine(Recursion.ProductOnetoN(5));
 
+            #endregion
 
+            #region Sum & Product of Digit
+
+            Console.WriteLine(Sum_ProductOfDigit.SumOfDigit(12345));
+            Console.WriteLine(Sum_ProductOfDigit.SumOfDigitRecusion(12345));
+            Console.WriteLine(Sum_ProductOfDigit.ProuuctOfDigit(12345));
+            Console.WriteLine(Sum_ProductOfDigit.ProductOfDigitRecusion(12345));
 
             #endregion
 
