@@ -117,17 +117,28 @@
 
             #endregion
 
-
             #region Recursive Binary Search
 
 
-            int[] nums = { 2, 3, 4, 5, 7, 10, 56, 99 };
-            int target = 4;
+            //int[] nums = { 2, 3, 4, 5, 7, 10, 56, 99 };
+            //int target = 4;
 
-            Console.WriteLine(BinarySearch.FindIndex(nums, target));
+            //Console.WriteLine(BinarySearch.FindIndex(nums, target));
 
 
-            Console.WriteLine(RecursiveBinarySearch.BinarySearch(nums, target));
+            //Console.WriteLine(RecursiveBinarySearch.BinarySearch(nums, target));
+
+            #endregion
+
+            #region Print One To N
+
+            //PrintOneToN.Print(5);
+
+            #endregion
+
+            #region Print One To N
+
+            PrintNToOne.Print(5);
 
             #endregion
 
