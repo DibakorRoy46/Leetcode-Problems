@@ -151,12 +151,22 @@
 
             #region Sum & Product of Digit
 
-            Console.WriteLine(Sum_ProductOfDigit.SumOfDigit(12345));
-            Console.WriteLine(Sum_ProductOfDigit.SumOfDigitRecusion(12345));
-            Console.WriteLine(Sum_ProductOfDigit.ProuuctOfDigit(12345));
-            Console.WriteLine(Sum_ProductOfDigit.ProductOfDigitRecusion(12345));
+            //Console.WriteLine(Sum_ProductOfDigit.SumOfDigit(12345));
+            //Console.WriteLine(Sum_ProductOfDigit.SumOfDigitRecusion(12345));
+            //Console.WriteLine(Sum_ProductOfDigit.ProuuctOfDigit(12345));
+            //Console.WriteLine(Sum_ProductOfDigit.ProductOfDigitRecusion(12345));
 
             #endregion
+
+            #region ReverseDigit
+
+            Console.WriteLine(ReverseOfDigit.Approch1(12345));
+            Console.WriteLine(ReverseOfDigit.Approch2(12345));
+            Console.WriteLine(ReverseOfDigit.Approch3(12345, 0));
+
+
+            #endregion
+
 
         }
 
