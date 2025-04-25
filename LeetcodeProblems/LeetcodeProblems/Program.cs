@@ -138,7 +138,16 @@
 
             #region Print One To N
 
-            PrintNToOne.Print(5);
+            //PrintNToOne.Print(5);
+
+            #endregion
+
+            #region Recursion Introduction
+
+            Console.WriteLine(Recursion.SumOnetoN(5));
+            Console.WriteLine(Recursion.ProductOnetoN(5));
+
+
 
             #endregion
 
