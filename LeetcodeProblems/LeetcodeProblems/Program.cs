@@ -160,13 +160,29 @@
 
             #region ReverseDigit
 
-            Console.WriteLine(ReverseOfDigit.Approch1(12345));
-            Console.WriteLine(ReverseOfDigit.Approch2(12345));
-            Console.WriteLine(ReverseOfDigit.Approch3(12345, 0));
+            //Console.WriteLine(ReverseOfDigit.Approch1(12345));
+            //Console.WriteLine(ReverseOfDigit.Approch2(12345));
+            //Console.WriteLine(ReverseOfDigit.Approch3(12345, 0));
 
 
             #endregion
 
+            #region Bubble Sort
+
+            int[] nums = { 3, 2, 5, 2, 6, 2, 1 };
+
+            var result=BubbleSort.BubbleSortUsingLoop(nums);
+            foreach (int i in result) 
+            {
+                Console.Write(i +" ");
+            }
+            BubbleSort.BubbleSortUsingRecursion(nums,nums.Length-1,0);
+            Console.WriteLine();    
+            foreach (int i in nums)
+            {
+                Console.Write(i + " ");
+            }
+            #endregion
 
         }
 
