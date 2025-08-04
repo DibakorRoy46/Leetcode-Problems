@@ -185,13 +185,25 @@
             #endregion
 
             #region Second Largest Element
-            
+
             //int result = SecondLargestElement.Approch1(nums);
             ////int result = SecondLargestElement.Approch2(nums);
             //Console.WriteLine(result);
 
             #endregion
 
+            #region Rotate Array
+
+            //nums = new int[] { 1, 2, 3, 4, 5, 6, 7 };
+
+            //var result=RotateArray.Rotate(nums, 3);
+            //result=RotateArray.Rotate2(nums, 3);
+            //foreach (int i in result)
+            //{
+            //    Console.Write(i + " ");
+            //}
+
+            #endregion
         }
 
     }
