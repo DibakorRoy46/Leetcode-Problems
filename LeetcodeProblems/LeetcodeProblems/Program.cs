@@ -5,6 +5,8 @@
         static void Main(string[] args)
         {
 
+            int[] nums = { 3, 2, 5, 2, 6, 2, 1 };
+
             #region 283. MoveZeros
 
             //int[] nums = [0, 1, 0, 3, 12];
@@ -169,19 +171,25 @@
 
             #region Bubble Sort
 
-            int[] nums = { 3, 2, 5, 2, 6, 2, 1 };
+            //var result=BubbleSort.BubbleSortUsingLoop(nums);
+            //foreach (int i in result) 
+            //{
+            //    Console.Write(i +" ");
+            //}
+            //BubbleSort.BubbleSortUsingRecursion(nums,nums.Length-1,0);
+            //Console.WriteLine();    
+            //foreach (int i in nums)
+            //{
+            //    Console.Write(i + " ");
+            //}
+            #endregion
 
-            var result=BubbleSort.BubbleSortUsingLoop(nums);
-            foreach (int i in result) 
-            {
-                Console.Write(i +" ");
-            }
-            BubbleSort.BubbleSortUsingRecursion(nums,nums.Length-1,0);
-            Console.WriteLine();    
-            foreach (int i in nums)
-            {
-                Console.Write(i + " ");
-            }
+            #region Second Largest Element
+            
+            //int result = SecondLargestElement.Approch1(nums);
+            ////int result = SecondLargestElement.Approch2(nums);
+            //Console.WriteLine(result);
+
             #endregion
 
         }
