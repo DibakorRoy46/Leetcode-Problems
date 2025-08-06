@@ -204,6 +204,17 @@
             //}
 
             #endregion
+
+            #region Basic Recursion
+
+            int n = 4;
+            //Console.WriteLine(BasicRecursion.NnumbersSum(n));
+            Console.WriteLine(BasicRecursion.Factorial(n));
+
+            #endregion
+
+
+
         }
 
     }
