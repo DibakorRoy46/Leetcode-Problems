@@ -207,13 +207,22 @@
 
             #region Basic Recursion
 
-            int n = 4;
-            //Console.WriteLine(BasicRecursion.NnumbersSum(n));
-            Console.WriteLine(BasicRecursion.Factorial(n));
+            //int n = 4;
+            ////Console.WriteLine(BasicRecursion.NnumbersSum(n));
+            //Console.WriteLine(BasicRecursion.Factorial(n));
 
             #endregion
 
+            #region Counting Number Frequencies
 
+            //var result= Hashing.CountingNumber(nums);
+
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item.Key+"-->"+item.Value);
+            //}
+
+            #endregion
 
         }
 
