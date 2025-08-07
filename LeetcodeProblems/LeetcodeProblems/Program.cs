@@ -235,6 +235,19 @@
             //}
 
             #endregion
+
+            #region Bubble Sort
+
+            nums = new int[] { 10, 30, 3, 4, 1, 11 };
+            //var result = BubbleSortAlgorithm.BubbleSort(nums);
+            var result = BubbleSortAlgorithm.BubbleSortUsingRecursion(nums,nums.Length-1,0);
+
+            foreach (var item in result)
+            {
+                Console.Write(item + " ");
+            }
+
+            #endregion
         }
 
     }
