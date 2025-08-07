@@ -224,6 +224,17 @@
 
             #endregion
 
+            #region Selection Sort
+
+            //nums = new int[] { 10, 30, 3, 4, 1, 11 };
+            //var result = SeclectionSort.Sort(nums);
+
+            //foreach (var item in result)
+            //{
+            //    Console.Write(item + " ");    
+            //}
+
+            #endregion
         }
 
     }
