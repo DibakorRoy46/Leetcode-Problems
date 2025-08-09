@@ -266,15 +266,24 @@
 
             #region Move Zeros
 
-            nums = new int[] { 0, 1, 0, 3, 12 };
-            var result=MoveZeroes.MoveZerosAtLast(nums);
+            //nums = new int[] { 0, 1, 0, 3, 12 };
+            //var result=MoveZeroes.MoveZerosAtLast(nums);
 
-            foreach (int i in nums)
-            {
-                Console.Write(i + " ");
-            }
+            //foreach (int i in nums)
+            //{
+            //    Console.Write(i + " ");
+            //}
             #endregion
 
+            #region Union Two Sorted Array
+
+            List<int> nums1 = new List<int>() { 2, 2, 4, 6, 6, 8 };
+            List<int> nums2 = new List<int>() { 4, 4, 6 };
+
+            var result=UnionSortedArray.FindUnion(nums1.ToArray(), nums2.ToArray());
+
+          
+            #endregion
         }
 
     }
