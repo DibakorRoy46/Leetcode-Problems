@@ -258,10 +258,21 @@
 
             #region Remove Duplicates from Sorted Array
 
-            nums= new int[] { 1,1,2 };
+            //nums= new int[] { 1,1,2 };
 
-            Console.WriteLine(RemoveDuplicate.RemoveDuplicatesUsingDictonary(nums));
+            //Console.WriteLine(RemoveDuplicate.RemoveDuplicatesUsingDictonary(nums));
 
+            #endregion
+
+            #region Move Zeros
+
+            nums = new int[] { 0, 1, 0, 3, 12 };
+            var result=MoveZeroes.MoveZerosAtLast(nums);
+
+            foreach (int i in nums)
+            {
+                Console.Write(i + " ");
+            }
             #endregion
 
         }
