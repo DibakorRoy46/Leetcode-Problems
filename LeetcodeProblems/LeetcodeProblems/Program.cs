@@ -251,8 +251,16 @@
 
             #region Array Sorted or Rotated
 
-            nums = new int[] { 2, 1, 3, 4 };
-            Console.WriteLine(ArraySortedOrRotated.IsSortedOrRotated(nums));
+            //nums = new int[] { 2, 1, 3, 4 };
+            //Console.WriteLine(ArraySortedOrRotated.IsSortedOrRotated(nums));
+
+            #endregion
+
+            #region Remove Duplicates from Sorted Array
+
+            nums= new int[] { 1,1,2 };
+
+            Console.WriteLine(RemoveDuplicate.RemoveDuplicatesUsingDictonary(nums));
 
             #endregion
 
