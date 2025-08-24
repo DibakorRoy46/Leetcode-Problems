@@ -277,12 +277,20 @@
 
             #region Union Two Sorted Array
 
-            List<int> nums1 = new List<int>() { 2, 2, 4, 6, 6, 8 };
-            List<int> nums2 = new List<int>() { 4, 4, 6 };
+            //List<int> nums1 = new List<int>() { 2, 2, 4, 6, 6, 8 };
+            //List<int> nums2 = new List<int>() { 4, 4, 6 };
 
-            var result=UnionSortedArray.FindUnion(nums1.ToArray(), nums2.ToArray());
+            //var result=UnionSortedArray.FindUnion(nums1.ToArray(), nums2.ToArray());
 
-          
+
+            #endregion
+
+            #region Longest SubArray Sum With K
+            nums = new int[] { 10, 5, 2, 7, 1, -10 };
+            int k = 15;
+
+            Console.WriteLine(LongestSubarraywithSumK.FindLongestSubarratSumOptimal(nums, k));
+
             #endregion
         }
 
