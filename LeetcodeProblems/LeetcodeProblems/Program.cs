@@ -286,10 +286,22 @@
             #endregion
 
             #region Longest SubArray Sum With K
-            nums = new int[] { 10, 5, 2, 7, 1, -10 };
-            int k = 15;
+            //nums = new int[] { 10, 5, 2, 7, 1, -10 };
+            //int k = 15;
 
-            Console.WriteLine(LongestSubarraywithSumK.FindLongestSubarratSumOptimal(nums, k));
+            //Console.WriteLine(LongestSubarraywithSumK.FindLongestSubarratSumOptimal(nums, k));
+
+            #endregion
+
+            #region Singly Linked List
+
+            SinglyLinkedList linkedList = new SinglyLinkedList();
+            linkedList.Add(10);
+            linkedList.Add(20);
+            linkedList.Add(30);
+
+            linkedList.PrintList();
+
 
             #endregion
         }
