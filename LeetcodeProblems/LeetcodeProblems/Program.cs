@@ -295,12 +295,27 @@
 
             #region Singly Linked List
 
-            SinglyLinkedList linkedList = new SinglyLinkedList();
-            linkedList.Add(10);
-            linkedList.Add(20);
-            linkedList.Add(30);
+            //SinglyLinkedList linkedList = new SinglyLinkedList();
+            //linkedList.Add(10);
+            //linkedList.Add(20);
+            //linkedList.Add(30);
 
-            linkedList.PrintList();
+            //linkedList.PrintList();
+
+
+            #endregion
+
+            #region Linked List Details
+
+            LinkeList linkedList = new LinkeList();
+            linkedList.InsertionInLastPosition(10);
+            linkedList.InsertionInLastPosition(20);
+            linkedList.InsertionInLastPosition(30);
+            linkedList.InsertionInLastPosition(40);
+            linkedList.InsertionInFirstPosition(50);
+            linkedList.InsertionInSpecificPosition(60,3);
+
+            linkedList.DisplayLinkedList();
 
 
             #endregion
