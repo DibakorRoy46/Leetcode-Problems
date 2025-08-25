@@ -1,4 +1,6 @@
 ﻿
+using static LeetcodeProblems.LeetCodeLinkedList;
+
 namespace LeetcodeProblems
 {
     public class LinkeList
@@ -76,6 +78,25 @@ namespace LeetcodeProblems
             size++;
         }
 
+        public void DeleteDuplicates()
+        {
+            Node node = head;
+
+            while (node != null && node.next != null)
+            {
+                if(node.value ==node.next.value)
+                {
+                    node.next = node.next.next;
+                    size--;
+                }
+                else
+                {
+                    node = node.next;
+                }
+            }
+            tail = node;
+            tail.next = null;
+        }
 
         public void DisplayLinkedList()
         {
@@ -89,7 +110,7 @@ namespace LeetcodeProblems
             Console.WriteLine("Size-->" + size);
         }
 
-        private class Node
+        public class Node
         {
             public int value;
             public Node next;

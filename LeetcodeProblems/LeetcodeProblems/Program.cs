@@ -307,15 +307,21 @@
 
             #region Linked List Details
 
-            LinkeList linkedList = new LinkeList();
-            linkedList.InsertionInLastPosition(10);
-            linkedList.InsertionInLastPosition(20);
-            linkedList.InsertionInLastPosition(30);
-            linkedList.InsertionInLastPosition(40);
-            linkedList.InsertionInFirstPosition(50);
-            linkedList.InsertionInSpecificPosition(60,3);
+            //LinkeList linkedList = new LinkeList();
+            //linkedList.InsertionInLastPosition(10);
+            //linkedList.InsertionInLastPosition(20);
+            //linkedList.InsertionInLastPosition(30);
+            //linkedList.InsertionInLastPosition(40);
+            //linkedList.InsertionInFirstPosition(50);
+            //linkedList.InsertionInSpecificPosition(60,3);
 
-            linkedList.DisplayLinkedList();
+            //linkedList.DisplayLinkedList();
+
+
+            #endregion
+
+            #region Remove Duplicate of a Sorted List
+
 
 
             #endregion
