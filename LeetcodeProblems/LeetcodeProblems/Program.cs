@@ -325,6 +325,22 @@
 
 
             #endregion
+
+            #region Signle LinkedList 
+
+            SLL linkedList = new SLL();
+            linkedList.InsertAtFirstPosition(10);
+            linkedList.InsertAtFirstPosition(20);
+            linkedList.InsertAtFirstPosition(30);
+            linkedList.InsertAtFirstPosition(40);
+            linkedList.InsertAtGivenPosition(60,3);
+            linkedList.DisplayLinkedList();
+
+            //linkedList.DeleteNodeUsingPosition(0);
+            //linkedList.DisplayLinkedList();
+            linkedList.DeleteNodeUsingPosition(2);
+            linkedList.DisplayLinkedList();
+            #endregion
         }
 
     }
