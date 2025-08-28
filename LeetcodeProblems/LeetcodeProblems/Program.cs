@@ -328,18 +328,35 @@
 
             #region Signle LinkedList 
 
-            SLL linkedList = new SLL();
-            linkedList.InsertAtFirstPosition(10);
-            linkedList.InsertAtFirstPosition(20);
-            linkedList.InsertAtFirstPosition(30);
-            linkedList.InsertAtFirstPosition(40);
-            linkedList.InsertAtGivenPosition(60,3);
-            linkedList.DisplayLinkedList();
-
-            //linkedList.DeleteNodeUsingPosition(0);
+            //SLL linkedList = new SLL();
+            //linkedList.InsertAtFirstPosition(10);
+            //linkedList.InsertAtFirstPosition(20);
+            //linkedList.InsertAtFirstPosition(30);
+            //linkedList.InsertAtFirstPosition(40);
+            //linkedList.InsertAtGivenPosition(60,3);
             //linkedList.DisplayLinkedList();
-            linkedList.DeleteNodeUsingPosition(2);
-            linkedList.DisplayLinkedList();
+
+            ////linkedList.DeleteNodeUsingPosition(0);
+            ////linkedList.DisplayLinkedList();
+            //linkedList.DeleteNodeUsingPosition(2);
+            //linkedList.DisplayLinkedList();
+            #endregion
+
+
+            #region Dubllly Linked List 
+
+            DLL doublyLinkedList = new DLL();
+
+            doublyLinkedList.InsertationInFirstPosition(10);
+            doublyLinkedList.InsertationInFirstPosition(20);
+            doublyLinkedList.InsertationInFirstPosition(30);
+            doublyLinkedList.InsertationInLastPosition(40);
+            doublyLinkedList.DisplayDoubllyLinkedList();
+            doublyLinkedList.InsertationInSpecificPosition(50,3);
+            doublyLinkedList.DisplayDoubllyLinkedList();
+
+            doublyLinkedList.DeleteNodeUsingPosition(3);
+            doublyLinkedList.DisplayDoubllyLinkedList();
             #endregion
         }
 
