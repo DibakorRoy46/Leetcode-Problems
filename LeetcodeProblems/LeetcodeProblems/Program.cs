@@ -347,15 +347,18 @@
 
             DLL doublyLinkedList = new DLL();
 
-            doublyLinkedList.InsertationInFirstPosition(10);
-            doublyLinkedList.InsertationInFirstPosition(20);
-            doublyLinkedList.InsertationInFirstPosition(30);
+            doublyLinkedList.InsertationInLastPosition(10);
+            doublyLinkedList.InsertationInLastPosition(20);
+            doublyLinkedList.InsertationInLastPosition(30);
             doublyLinkedList.InsertationInLastPosition(40);
-            doublyLinkedList.DisplayDoubllyLinkedList();
-            doublyLinkedList.InsertationInSpecificPosition(50,3);
+            //doublyLinkedList.InsertationInLastPosition(40);
+            //doublyLinkedList.DisplayDoubllyLinkedList();
+            //doublyLinkedList.InsertationInSpecificPosition(50,3);
             doublyLinkedList.DisplayDoubllyLinkedList();
 
-            doublyLinkedList.DeleteNodeUsingPosition(3);
+            //doublyLinkedList.DeleteNodeUsingPosition(3);
+            //doublyLinkedList.DisplayDoubllyLinkedList();
+            doublyLinkedList.ReverseDoublyLinkedList();
             doublyLinkedList.DisplayDoubllyLinkedList();
             #endregion
         }

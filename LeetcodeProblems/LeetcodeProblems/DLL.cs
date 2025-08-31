@@ -1,5 +1,7 @@
 ﻿
 
+using System.Security.Cryptography.X509Certificates;
+
 namespace LeetcodeProblems
 {
     internal class DLL
@@ -119,6 +121,31 @@ namespace LeetcodeProblems
             temp.next = temp.next.next;
             temp.next.prev = temp;
             size--;
+        }
+
+        public void ReverseDoublyLinkedList()
+        {
+            ListNode temp = head;
+            ListNode reverseListNode = null;
+
+            while(temp != null)
+            {
+                ListNode newNode=new ListNode(temp.val,temp.prev,temp.next);
+                if(reverseListNode==null)
+                {
+                    reverseListNode = newNode;
+                    reverseListNode.prev = null;
+                }
+                else
+                {
+                    newNode.next = reverseListNode;
+                    reverseListNode.prev = newNode;
+                    reverseListNode = newNode;
+                }
+                temp = temp.next;
+            }
+
+            head = reverseListNode;
         }
         public void DisplayDoubllyLinkedList()
         {
