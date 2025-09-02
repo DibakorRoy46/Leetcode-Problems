@@ -328,16 +328,22 @@
 
             #region Signle LinkedList 
 
-            //SLL linkedList = new SLL();
-            //linkedList.InsertAtFirstPosition(10);
-            //linkedList.InsertAtFirstPosition(20);
-            //linkedList.InsertAtFirstPosition(30);
+            SLL linkedList = new SLL();
+            linkedList.InsertAtLastPosition(2);
+            linkedList.InsertAtLastPosition(1);
+            linkedList.InsertAtLastPosition(3);
+            linkedList.InsertAtLastPosition(5);
+            linkedList.InsertAtLastPosition(6);
+            linkedList.InsertAtLastPosition(4);
+            linkedList.InsertAtLastPosition(7);
             //linkedList.InsertAtFirstPosition(40);
-            //linkedList.InsertAtGivenPosition(60,3);
-            //linkedList.DisplayLinkedList();
+            //linkedList.InsertAtGivenPosition(60, 3);
+            linkedList.DisplayLinkedList();
+            linkedList.OddEvenList();
+            linkedList.DisplayLinkedList();
 
-            ////linkedList.DeleteNodeUsingPosition(0);
-            ////linkedList.DisplayLinkedList();
+            //linkedList.DeleteNodeUsingPosition(0);
+            //linkedList.DisplayLinkedList();
             //linkedList.DeleteNodeUsingPosition(2);
             //linkedList.DisplayLinkedList();
             #endregion
@@ -345,21 +351,21 @@
 
             #region Dubllly Linked List 
 
-            DLL doublyLinkedList = new DLL();
+            //DLL doublyLinkedList = new DLL();
 
-            doublyLinkedList.InsertationInLastPosition(10);
-            doublyLinkedList.InsertationInLastPosition(20);
-            doublyLinkedList.InsertationInLastPosition(30);
-            doublyLinkedList.InsertationInLastPosition(40);
+            //doublyLinkedList.InsertationInLastPosition(10);
+            //doublyLinkedList.InsertationInLastPosition(20);
+            //doublyLinkedList.InsertationInLastPosition(30);
             //doublyLinkedList.InsertationInLastPosition(40);
+            ////doublyLinkedList.InsertationInLastPosition(40);
+            ////doublyLinkedList.DisplayDoubllyLinkedList();
+            ////doublyLinkedList.InsertationInSpecificPosition(50,3);
             //doublyLinkedList.DisplayDoubllyLinkedList();
-            //doublyLinkedList.InsertationInSpecificPosition(50,3);
-            doublyLinkedList.DisplayDoubllyLinkedList();
 
-            //doublyLinkedList.DeleteNodeUsingPosition(3);
+            ////doublyLinkedList.DeleteNodeUsingPosition(3);
+            ////doublyLinkedList.DisplayDoubllyLinkedList();
+            //doublyLinkedList.ReverseDoublyLinkedList();
             //doublyLinkedList.DisplayDoubllyLinkedList();
-            doublyLinkedList.ReverseDoublyLinkedList();
-            doublyLinkedList.DisplayDoubllyLinkedList();
             #endregion
         }
 

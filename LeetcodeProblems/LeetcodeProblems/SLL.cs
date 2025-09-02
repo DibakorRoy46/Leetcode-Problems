@@ -36,10 +36,104 @@ namespace LeetcodeProblems
             if(head==null)
             {
                 InsertAtFirstPosition(value);
+                return;
             }
             tail.next = newNode;
             tail = newNode;
             size++;
+        }
+
+        public ListNode OddEvenList()
+        {
+            ListNode curr = head;
+
+            ListNode oddList = null;
+            ListNode evenList = null;
+
+            ListNode tempEven=null;
+            ListNode tempOdd = null;
+            while (curr != null)
+            {
+                ListNode newNode = new ListNode(curr.val, null);
+                if (newNode.val % 2 == 0)
+                {
+                    if (evenList == null)
+                    {
+                        evenList = newNode;
+                    }
+                    else
+                    {
+                        tempEven = evenList;
+                        while (tempEven.next != null)
+                        {
+                            tempEven = tempEven.next;
+                        }
+                        tempEven.next = newNode;
+                    }
+                }
+                else
+                {
+                    if (oddList == null)
+                    {
+                        oddList = newNode;
+                    }
+                    else
+                    {
+                        tempOdd = oddList;
+                        while (tempOdd.next != null)
+                        {
+                            tempOdd = tempOdd.next;
+                        }
+                        tempOdd.next = newNode;
+                    }
+                }
+                curr = curr.next;
+            }
+
+            ListNode result= null;
+            tempEven = evenList;
+            tempOdd = oddList;
+            while (tempOdd != null)
+            {
+                ListNode newNode = new ListNode(tempOdd.val, null);
+
+                if(result == null)
+                {
+                    result = newNode;
+                }
+                else
+                {
+                    ListNode temp = result;
+                    while (temp.next != null)
+                    {
+                        temp = temp.next;
+                    }
+                    temp.next = newNode;
+                }
+                tempOdd= tempOdd.next;
+            }
+
+            while (tempEven != null)
+            {
+                ListNode newNode = new ListNode(tempEven.val, null);
+
+                if (result == null)
+                {
+                    result = newNode;
+                }
+                else
+                {
+                    ListNode temp = result;
+                    while (temp.next != null)
+                    {
+                        temp = temp.next;
+                    }
+                    temp.next = newNode;
+                }
+                tempEven= tempEven.next;
+            }
+
+            return result;
         }
 
         public void InsertAtGivenPosition(int value,int position)
