@@ -317,8 +317,58 @@ namespace LeetcodeProblems
                 ListNode newNode = new ListNode(sum % 10);
                 temp.next = newNode;
                 temp = temp.next;
-
             }
+            return result.next;
+        }
+
+
+        public ListNode ReverseBetween(ListNode head, int left, int right)
+        {
+            ListNode curr=head;
+            ListNode result=new ListNode(0);
+            ListNode tempResult = result;
+            ListNode reverseList = null;
+
+            int size = 0;
+            while (curr != null)
+            {
+                size++;
+
+                if(size>=left && size<=right)
+                {
+                    ListNode newNode = new ListNode(curr.val);
+                    if (reverseList == null)
+                    {
+                        reverseList = newNode;
+                    }
+                    else
+                    {
+                        newNode.next = reverseList;
+                        reverseList = newNode;
+                    }
+                }
+                curr = curr.next;
+            }
+
+            size = 0;
+            curr = head;
+            ListNode tempReverse = reverseList;
+
+            while (curr != null)
+            {
+                size++;
+                ListNode newNode = new ListNode(curr.val); 
+                
+                if (size >= left && size <= right)
+                {
+                    newNode = new ListNode(tempReverse.val);
+                    tempReverse = tempReverse.next;
+                }
+                tempResult.next = newNode;
+                tempResult = tempResult.next;
+                curr = curr.next;            
+            }
+
             return result.next;
         }
 
