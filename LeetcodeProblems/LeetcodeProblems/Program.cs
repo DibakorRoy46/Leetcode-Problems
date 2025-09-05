@@ -328,26 +328,26 @@
 
             #region Signle LinkedList 
 
-            SLL linkedList = new SLL();
-            linkedList.InsertAtLastPosition(2);
-            linkedList.InsertAtLastPosition(1);
-            linkedList.InsertAtLastPosition(3);
-            linkedList.InsertAtLastPosition(5);
-            linkedList.InsertAtLastPosition(6);
-            linkedList.InsertAtLastPosition(4);
-            linkedList.InsertAtLastPosition(7);
-            //linkedList.InsertAtFirstPosition(40);
-            //linkedList.InsertAtGivenPosition(60, 3);
-            linkedList.DisplayLinkedList();
-            linkedList.OddEvenList();
-            linkedList.DisplayLinkedList();
+            //SLL linkedList = new SLL();
+            //linkedList.InsertAtLastPosition(1);
+            //linkedList.InsertAtLastPosition(2);
+            //linkedList.InsertAtLastPosition(3);
+            //linkedList.InsertAtLastPosition(4);
+            ////linkedList.InsertAtLastPosition(5);
+            ////linkedList.InsertAtLastPosition(6);
+            ////linkedList.InsertAtLastPosition(7);
+            ////linkedList.InsertAtFirstPosition(40);
+            ////linkedList.InsertAtGivenPosition(60, 3);
+            //linkedList.DisplayLinkedList();
+            ////linkedList.RemoveNthFromEnd(1);
+            //linkedList.DeleteMiddle();
+            //linkedList.DisplayLinkedList();
 
-            //linkedList.DeleteNodeUsingPosition(0);
-            //linkedList.DisplayLinkedList();
-            //linkedList.DeleteNodeUsingPosition(2);
-            //linkedList.DisplayLinkedList();
+            ////linkedList.DeleteNodeUsingPosition(0);
+            ////linkedList.DisplayLinkedList();
+            ////linkedList.DeleteNodeUsingPosition(2);
+            ////linkedList.DisplayLinkedList();
             #endregion
-
 
             #region Dubllly Linked List 
 
@@ -366,6 +366,28 @@
             ////doublyLinkedList.DisplayDoubllyLinkedList();
             //doublyLinkedList.ReverseDoublyLinkedList();
             //doublyLinkedList.DisplayDoubllyLinkedList();
+            #endregion
+
+
+            #region Add Two Numbers 
+
+            SLL linkedList = new SLL();
+            linkedList.InsertAtLastPosition(2);
+            linkedList.InsertAtLastPosition(4);
+            linkedList.InsertAtLastPosition(3);
+            linkedList.DisplayLinkedList();
+
+            SLL linkedList2 = new SLL();
+            linkedList2.InsertAtLastPosition(5);
+            linkedList2.InsertAtLastPosition(5);
+            linkedList2.InsertAtLastPosition(7);
+            linkedList2.DisplayLinkedList();
+
+            SLL linkedList3 = new SLL();
+            linkedList3.AddTwoNumberApproch2(linkedList.head, linkedList2.head);
+
+
+
             #endregion
         }
 

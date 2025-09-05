@@ -17,7 +17,7 @@ namespace LeetcodeProblems
         public void InsertAtFirstPosition(int value)
         {
             ListNode newNode = new ListNode(value);
-            if(head==null)
+            if (head == null)
             {
                 head = newNode;
                 tail = newNode;
@@ -25,15 +25,15 @@ namespace LeetcodeProblems
                 return;
             }
             newNode.next = head;
-            head= newNode;
+            head = newNode;
             size++;
         }
 
         public void InsertAtLastPosition(int value)
         {
-            ListNode newNode= new ListNode(value);
+            ListNode newNode = new ListNode(value);
 
-            if(head==null)
+            if (head == null)
             {
                 InsertAtFirstPosition(value);
                 return;
@@ -49,13 +49,12 @@ namespace LeetcodeProblems
 
             ListNode oddList = null;
             ListNode evenList = null;
-
-            ListNode tempEven=null;
-            ListNode tempOdd = null;
+            int i = 0;
             while (curr != null)
             {
+                i++;
                 ListNode newNode = new ListNode(curr.val, null);
-                if (newNode.val % 2 == 0)
+                if (i % 2 == 0)
                 {
                     if (evenList == null)
                     {
@@ -63,12 +62,8 @@ namespace LeetcodeProblems
                     }
                     else
                     {
-                        tempEven = evenList;
-                        while (tempEven.next != null)
-                        {
-                            tempEven = tempEven.next;
-                        }
-                        tempEven.next = newNode;
+                        newNode.next = evenList;
+                        evenList = newNode;
                     }
                 }
                 else
@@ -79,39 +74,17 @@ namespace LeetcodeProblems
                     }
                     else
                     {
-                        tempOdd = oddList;
-                        while (tempOdd.next != null)
-                        {
-                            tempOdd = tempOdd.next;
-                        }
-                        tempOdd.next = newNode;
+                        newNode.next = oddList;
+                        oddList = newNode;
                     }
                 }
                 curr = curr.next;
             }
 
-            ListNode result= null;
-            tempEven = evenList;
-            tempOdd = oddList;
-            while (tempOdd != null)
-            {
-                ListNode newNode = new ListNode(tempOdd.val, null);
+            ListNode result = null;
+            ListNode tempEven = evenList;
+            ListNode tempOdd = oddList;
 
-                if(result == null)
-                {
-                    result = newNode;
-                }
-                else
-                {
-                    ListNode temp = result;
-                    while (temp.next != null)
-                    {
-                        temp = temp.next;
-                    }
-                    temp.next = newNode;
-                }
-                tempOdd= tempOdd.next;
-            }
 
             while (tempEven != null)
             {
@@ -123,58 +96,71 @@ namespace LeetcodeProblems
                 }
                 else
                 {
-                    ListNode temp = result;
-                    while (temp.next != null)
-                    {
-                        temp = temp.next;
-                    }
-                    temp.next = newNode;
+                    newNode.next = result;
+                    result = newNode;
                 }
-                tempEven= tempEven.next;
+                tempEven = tempEven.next;
+            }
+
+
+            while (tempOdd != null)
+            {
+                ListNode newNode = new ListNode(tempOdd.val, null);
+
+                if (result == null)
+                {
+                    result = newNode;
+                }
+                else
+                {
+                    newNode.next = result;
+                    result = newNode;
+                }
+                tempOdd = tempOdd.next;
             }
 
             return result;
         }
 
-        public void InsertAtGivenPosition(int value,int position)
+        public void InsertAtGivenPosition(int value, int position)
         {
             ListNode newNode = new ListNode(value);
-            if(position==0)
+            if (position == 0)
             {
                 InsertAtFirstPosition(value);
                 return;
             }
-            if(position==size)
+            if (position == size)
             {
                 InsertAtLastPosition(value);
                 return;
             }
             ListNode temp = head;
             int currentPositon = 0;
-            
-            while(currentPositon<position-1)
+
+            while (currentPositon < position - 1)
             {
                 temp = temp.next;
                 currentPositon++;
             }
             newNode.next = temp.next;
             temp.next = newNode;
-            
+
             size++;
         }
-            
+
         public void DeleteNodeUsingPosition(int position)
         {
-            if(position==0)
+            if (position == 0)
             {
                 head = head.next;
                 size--;
                 return;
             }
-            else if(position == size-1)
+            else if (position == size - 1)
             {
                 ListNode temp = head;
-                while(temp.next!=tail)
+                while (temp.next != tail)
                 {
                     temp = temp.next;
                 }
@@ -186,7 +172,7 @@ namespace LeetcodeProblems
                 ListNode temp = head;
                 int currentPosition = 0;
 
-                while(currentPosition<position-1)
+                while (currentPosition < position - 1)
                 {
                     temp = temp.next;
                     currentPosition++;
@@ -194,6 +180,146 @@ namespace LeetcodeProblems
                 temp.next = temp.next.next;
                 size--;
             }
+        }
+
+        public ListNode RemoveNthFromEnd(int n)
+        {
+            ListNode temp = head;
+            int size = 0;
+            while (temp != null)
+            {
+                temp = temp.next;
+                size++;
+            }
+            temp = head;
+            if (size == n)
+            {
+                head = head.next;
+                return head;
+            }
+
+            while (size > n + 1)
+            {
+                temp = temp.next;
+                size--;
+            }
+            temp.next = temp.next.next;
+
+            return head;
+        }
+
+
+        public ListNode DeleteMiddle()
+        {
+            ListNode temp = head;
+            int size = 0;
+            while (temp != null)
+            {
+                temp = temp.next;
+                size++;
+            }
+            int middleIndex = Convert.ToInt32(Math.Floor(size / 2.00));
+            Console.Write(middleIndex);
+            temp = head;
+            size = 0;
+
+            if (middleIndex == 0)
+            {
+                head = head.next;
+                return head;
+            }
+            while (temp != null && size < middleIndex - 1)
+            {
+                temp = temp.next;
+                size++;
+            }
+            temp.next = temp.next.next;
+
+            return head;
+        }
+
+
+        public ListNode AddTowNumber(ListNode l1, ListNode l2)
+        {
+            ListNode currentL1 = l1;
+            ListNode currentL2 = l2;
+            ListNode result = null;
+            int carry = 0;  
+
+            while (currentL1 != null || currentL2 !=null)
+            {
+                int nodeOneValue = 0;
+                int nodeTwoValue = 0;   
+                
+                if(currentL1 != null)
+                {
+                    nodeOneValue = currentL1.val;
+                    currentL1 = currentL1.next;
+                }
+                if(currentL2 != null)
+                {
+                    nodeTwoValue = currentL2.val;
+                    currentL2 = currentL2.next;
+                }
+                int sum = nodeOneValue + nodeTwoValue + carry;
+                carry = sum / 10;
+                ListNode newNode = new ListNode(sum % 10);
+                if(result == null)
+                {
+                    result = newNode;
+                }
+                else
+                {
+                    ListNode temp = result;
+                    while(temp.next != null)
+                    {
+                        temp = temp.next;
+                    }
+                    temp.next = newNode; 
+                }
+            }
+
+            if(carry > 0)
+            {
+                ListNode newNode = new ListNode(carry);
+                ListNode temp = result;
+                while(temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = newNode;
+            }
+
+            return result;
+        }
+
+        public ListNode AddTwoNumberApproch2(ListNode l1, ListNode l2)
+        {
+            ListNode result = new ListNode(0);
+            ListNode temp = result;
+            int carry = 0;
+
+            while (l1 != null || l1 != null  || carry>0)
+            {
+                int sum = 0;
+                if (l1 != null)
+                {
+                    sum += l1.val;
+                    l1 = l1.next;
+                }
+                if (l2 != null)
+                {
+                    sum += l2.val;
+                    l2 = l2.next;
+                }
+                sum += carry;
+                carry = sum / 10;
+                ListNode newNode = new ListNode(sum % 10);
+                temp.next = newNode;
+                temp = temp.next;
+
+            }
+            return result.next;
         }
 
         public void DisplayLinkedList()
