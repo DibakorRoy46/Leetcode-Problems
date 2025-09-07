@@ -372,6 +372,145 @@ namespace LeetcodeProblems
             return result.next;
         }
 
+        public void ReorderList(ListNode head)
+        {
+            if(head == null || head.next == null)
+            {
+                return;
+            }
+            ListNode slow = head;
+            ListNode fast = head;
+            while(fast != null && fast.next != null)
+            {
+                slow = slow.next;
+                fast = fast.next.next;
+            }
+            ListNode prev = null;
+            ListNode curr = slow;
+            ListNode next = null;
+            while(curr != null)
+            {
+                next = curr.next;
+                curr.next = prev;
+                prev = curr;
+                curr = next;
+            }
+            ListNode first = head;
+            ListNode second = prev;
+            while(second.next != null)
+            {
+                ListNode temp1 = first.next;
+                first.next = second;
+                first = temp1;
+                ListNode temp2 = second.next;
+                second.next = first;
+                second = temp2;
+            }
+        }
+
+        public void ReorderListApproch2(ListNode head)
+        {
+            if(head == null || head.next == null)
+            {
+                return;
+            }
+
+            ListNode curr = head;
+            ListNode reverseList= null; 
+
+            while(curr != null)
+            {
+                ListNode newNode = new ListNode(curr.val);
+                if(reverseList == null)
+                {
+                    reverseList = newNode;
+                }
+                else
+                {
+                    newNode.next = reverseList;
+                    reverseList = newNode;
+                }
+                curr = curr.next;
+            }
+
+            curr = head;
+            ListNode slow=head;
+            ListNode fast=head;
+            ListNode currentReverse = reverseList;
+            ListNode result=new ListNode(0);
+            ListNode tempResult = result;
+
+            while (fast != null && fast.next != null)
+            {
+                ListNode newNode = new ListNode(slow.val);              
+                tempResult.next = newNode;
+                tempResult = tempResult.next;
+                ListNode newNodeFromReverse = new ListNode(currentReverse.val);              
+                tempResult.next = newNodeFromReverse;
+                tempResult = tempResult.next;
+
+
+                slow = slow.next;
+                fast = fast.next.next;
+                curr = curr.next;
+                currentReverse= currentReverse.next;
+            }
+            if (curr != null)
+            {
+                ListNode newNode = new ListNode(slow.val);
+                tempResult.next = newNode;
+            }
+
+            ListNode p1 = head;
+            ListNode p2 = result.next;
+            while (p1 != null && p2 != null)
+            {
+                p1.val = p2.val;
+                p1 = p1.next;
+                p2 = p2.next;
+            }
+        }
+
+        public ListNode ReverseKGroup(ListNode head, int k)
+        {
+            if(head == null || head.next == null || k <= 1)
+            {
+                return head;
+            }
+
+            ListNode curr = head;
+            int size = 0;
+            while(curr != null)
+            {
+                size++;
+                curr = curr.next;
+            }
+
+            int neededReverse = size / k;
+            size = 0;
+
+            ListNode result = new ListNode(0);
+            ListNode tempResult = result;
+            curr = head;
+
+            while (curr != null)
+            {
+                size++;
+                if(neededReverse>0)
+                {
+
+                }
+
+                if(size % k == 0)
+                {
+                    neededReverse--;
+                    size = 0;
+                }
+                curr = curr.next;
+            }
+        }
+
+
         public void DisplayLinkedList()
         {
             ListNode temp = head;

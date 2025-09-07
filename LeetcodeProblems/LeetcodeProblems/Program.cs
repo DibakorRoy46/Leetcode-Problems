@@ -393,6 +393,21 @@
             #region Reverse Linked List 2
 
 
+            //SLL linkedList = new SLL();
+            //linkedList.InsertAtLastPosition(1);
+            //linkedList.InsertAtLastPosition(2);
+            //linkedList.InsertAtLastPosition(3);
+            //linkedList.InsertAtLastPosition(4);
+            //linkedList.InsertAtLastPosition(5);
+            //linkedList.DisplayLinkedList();
+
+            //var result= linkedList.ReverseBetween(linkedList.head, 2, 4);
+
+            #endregion
+
+
+            #region Reorder List    
+
             SLL linkedList = new SLL();
             linkedList.InsertAtLastPosition(1);
             linkedList.InsertAtLastPosition(2);
@@ -401,8 +416,8 @@
             linkedList.InsertAtLastPosition(5);
             linkedList.DisplayLinkedList();
 
-            var result= linkedList.ReverseBetween(linkedList.head, 2, 4);
-            
+            linkedList.ReorderListApproch2(linkedList.head);
+            linkedList.DisplayLinkedList();
             #endregion
         }
 
