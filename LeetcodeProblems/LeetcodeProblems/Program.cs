@@ -408,6 +408,21 @@
 
             #region Reorder List    
 
+            //SLL linkedList = new SLL();
+            //linkedList.InsertAtLastPosition(1);
+            //linkedList.InsertAtLastPosition(2);
+            //linkedList.InsertAtLastPosition(3);
+            //linkedList.InsertAtLastPosition(4);
+            //linkedList.InsertAtLastPosition(5);
+            //linkedList.DisplayLinkedList();
+
+            //linkedList.ReorderListApproch2(linkedList.head);
+            //linkedList.DisplayLinkedList();
+            #endregion
+
+
+            #region Reverse Nodes in k-Group
+
             SLL linkedList = new SLL();
             linkedList.InsertAtLastPosition(1);
             linkedList.InsertAtLastPosition(2);
@@ -416,8 +431,9 @@
             linkedList.InsertAtLastPosition(5);
             linkedList.DisplayLinkedList();
 
-            linkedList.ReorderListApproch2(linkedList.head);
+            linkedList.ReverseKGroup(linkedList.head, 2);
             linkedList.DisplayLinkedList();
+
             #endregion
         }
 

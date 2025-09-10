@@ -487,27 +487,52 @@ namespace LeetcodeProblems
             }
 
             int neededReverse = size / k;
-            size = 0;
-
-            ListNode result = new ListNode(0);
-            ListNode tempResult = result;
             curr = head;
 
-            while (curr != null)
+            ListNode result = null;
+            while (neededReverse > 0)
             {
-                size++;
-                if(neededReverse>0)
+                int count = 0;
+               
+                while (curr!=null && count<k )
                 {
-
+                    ListNode newNode = new ListNode(curr.val);  
+                    if(result == null)
+                    {
+                        result = newNode;
+                    }
+                    else
+                    {
+                        if(count==0)
+                        {
+                            ListNode tempResult = result;
+                            while(tempResult != null)
+                            {
+                                tempResult = tempResult.next;
+                            }
+                            tempResult = newNode;
+                        }
+                        else
+                        {
+                            newNode.next = result;
+                            result = newNode;
+                        }                          
+                    }
+                    curr = curr.next;
+                    count++;
                 }
+                neededReverse--;
+            }
 
-                if(size % k == 0)
-                {
-                    neededReverse--;
-                    size = 0;
-                }
+            while(curr != null)
+            {
+                ListNode newNode = new ListNode(curr.val);
+                result.next = newNode;
                 curr = curr.next;
             }
+
+            return head;
+
         }
 
 
