@@ -420,20 +420,34 @@
             //linkedList.DisplayLinkedList();
             #endregion
 
-
             #region Reverse Nodes in k-Group
 
-            SLL linkedList = new SLL();
-            linkedList.InsertAtLastPosition(1);
-            linkedList.InsertAtLastPosition(2);
-            linkedList.InsertAtLastPosition(3);
-            linkedList.InsertAtLastPosition(4);
-            linkedList.InsertAtLastPosition(5);
-            linkedList.DisplayLinkedList();
+            //SLL linkedList = new SLL();
+            //linkedList.InsertAtLastPosition(1);
+            //linkedList.InsertAtLastPosition(2);
+            //linkedList.InsertAtLastPosition(3);
+            //linkedList.InsertAtLastPosition(4);
+            //linkedList.InsertAtLastPosition(5);
+            //linkedList.DisplayLinkedList();
 
-            linkedList.ReverseKGroup(linkedList.head, 2);
-            linkedList.DisplayLinkedList();
+            //linkedList.ReverseKGroup(linkedList.head, 2);
+            //linkedList.DisplayLinkedList();
 
+            #endregion
+
+            #region Recursion Problems
+
+            //RecursionProblems.PrintNToOne(5);
+            //RecursionProblems.PrintOneToN(5);
+            //Console.WriteLine( RecursionProblems.ProductOneToN(5) );
+            //Console.WriteLine( RecursionProblems.SumOfOneToN(5) );
+            //Console.WriteLine( RecursionProblems.ProductOfDigit(123) );
+            //Console.WriteLine( RecursionProblems.ProductOfDigitWithPassingNumber(123,1) );
+            Console.WriteLine( RecursionProblems.ReverseANumber(123) );
+            Console.WriteLine( RecursionProblems.IsPalindrome(121) );
+            Console.WriteLine( RecursionProblems.CountNumberOfZeros(1) );
+            Console.WriteLine( RecursionProblems.NumberOfSteps(14) );
+            Console.WriteLine( RecursionProblems.NumberOfSteps(14,0) );
             #endregion
         }
 
