@@ -443,11 +443,27 @@
             //Console.WriteLine( RecursionProblems.SumOfOneToN(5) );
             //Console.WriteLine( RecursionProblems.ProductOfDigit(123) );
             //Console.WriteLine( RecursionProblems.ProductOfDigitWithPassingNumber(123,1) );
-            Console.WriteLine( RecursionProblems.ReverseANumber(123) );
-            Console.WriteLine( RecursionProblems.IsPalindrome(121) );
-            Console.WriteLine( RecursionProblems.CountNumberOfZeros(1) );
-            Console.WriteLine( RecursionProblems.NumberOfSteps(14) );
-            Console.WriteLine( RecursionProblems.NumberOfSteps(14,0) );
+            //Console.WriteLine( RecursionProblems.ReverseANumber(123) );
+            //Console.WriteLine( RecursionProblems.IsPalindrome(121) );
+            //Console.WriteLine( RecursionProblems.CountNumberOfZeros(1) );
+            //Console.WriteLine( RecursionProblems.NumberOfSteps(14) );
+            //Console.WriteLine( RecursionProblems.NumberOfSteps(14,0) );
+
+            nums= new int[] { 1, 2, 10, 4, 2 };
+           // Console.WriteLine( RecursionProblems.IsArraySortedOrNot(nums,0) );
+            Console.WriteLine( RecursionProblems.LinearSearchUsingRecursion(nums,9,0) );
+            Console.WriteLine( RecursionProblems.LinearSearchIndexUsingRecursion(nums,9,0) );
+            List<int>result= RecursionProblems.FindAllIndexUsingRecusion(nums,2,0,new List<int>()) ;
+            foreach (var item in result)
+            {
+                Console.Write(item + " ");
+            }
+            Console.WriteLine();
+            result = RecursionProblems.FindAllIndexUsingRecusion2(nums, 2, 0);
+            foreach (var item in result)
+            {
+                Console.Write(item + " ");
+            }
             #endregion
         }
 

@@ -86,4 +86,83 @@ internal class RecursionProblems
             return result;
         return (num % 2 == 0 ?  NumberOfSteps(num / 2,result+1) : NumberOfSteps(num - 1, result + 1));
     }
+
+    public static bool IsArraySortedOrNot(int[] arr, int index)
+    {
+        if(index==arr.Length-1)
+            return true;
+        return arr[index]<=arr[index+1] && IsArraySortedOrNot(arr,index+1);
+    }
+
+    public static bool LinearSearchUsingRecursion(int[] nums,int target,int index)
+    {
+        if(index==nums.Length)
+            return false;
+        if(nums[index]==target)
+            return true;
+
+        return LinearSearchUsingRecursion(nums,target,index+1);
+    }
+
+    public static int LinearSearchIndexUsingRecursion(int[] nums, int target, int index)
+    {
+        if (index == nums.Length)
+            return -1;
+        if (nums[index] == target)
+            return index;
+
+        return LinearSearchIndexUsingRecursion(nums, target, index + 1);
+    }
+
+    public static List<int> FindAllIndexUsingRecusion(int[] nums,int target,int index,List<int>result)
+    {
+        if (index == nums.Length)
+            return result;
+        if (nums[index]==target)
+            result.Add(index);
+        return FindAllIndexUsingRecusion(nums, target, index + 1,result);
+    }
+
+    public static List<int> FindAllIndexUsingRecusion2(int[] nums, int target, int index)
+    {
+        List<int> result = new List<int>();
+        if (index == nums.Length)
+            return result;
+        if (nums[index] == target)
+            result.Add(index);
+        List<int> ansFromBelowCalls = FindAllIndexUsingRecusion2(nums, target, index + 1);
+        result.AddRange(ansFromBelowCalls);
+        return result;
+    }
+
+    public int RoatedBinarySearch(int[] nums,int target,int start,int end)
+    {
+        if(start>end)
+            return -1;
+
+        int mid=start + (end - start) / 2;
+
+        if(nums[mid]== target)
+            return mid;
+
+        if(nums[start] <= nums[mid])
+        {
+            if (nums[start]<= target && target <= nums[mid])
+            {
+                return RoatedBinarySearch(nums, target, start, mid - 1);
+            }
+            else
+            {
+                 return RoatedBinarySearch(nums, target, mid + 1, end);
+            }
+        }
+
+        if(target>=nums[mid] && target <= nums[end])
+        {
+            return RoatedBinarySearch(nums, target, mid + 1, end);
+        }
+
+        return RoatedBinarySearch(nums, target, start, mid - 1);
+    }
+
 }
