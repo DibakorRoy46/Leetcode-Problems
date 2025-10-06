@@ -449,18 +449,37 @@
             //Console.WriteLine( RecursionProblems.NumberOfSteps(14) );
             //Console.WriteLine( RecursionProblems.NumberOfSteps(14,0) );
 
-            nums= new int[] { 1, 2, 10, 4, 2 };
-           // Console.WriteLine( RecursionProblems.IsArraySortedOrNot(nums,0) );
-            Console.WriteLine( RecursionProblems.LinearSearchUsingRecursion(nums,9,0) );
-            Console.WriteLine( RecursionProblems.LinearSearchIndexUsingRecursion(nums,9,0) );
-            List<int>result= RecursionProblems.FindAllIndexUsingRecusion(nums,2,0,new List<int>()) ;
-            foreach (var item in result)
-            {
-                Console.Write(item + " ");
-            }
-            Console.WriteLine();
-            result = RecursionProblems.FindAllIndexUsingRecusion2(nums, 2, 0);
-            foreach (var item in result)
+            nums= new int[] { 1, 2, 10, 4, 3 };
+            // Console.WriteLine( RecursionProblems.IsArraySortedOrNot(nums,0) );
+            //Console.WriteLine( RecursionProblems.LinearSearchUsingRecursion(nums,9,0) );
+            //Console.WriteLine( RecursionProblems.LinearSearchIndexUsingRecursion(nums,9,0) );
+            //List<int>result= RecursionProblems.FindAllIndexUsingRecusion(nums,2,0,new List<int>()) ;
+            //foreach (var item in result)
+            //{
+            //    Console.Write(item + " ");
+            //}
+            //Console.WriteLine();
+            //result = RecursionProblems.FindAllIndexUsingRecusion2(nums, 2, 0);
+            //foreach (var item in result)
+            //{
+            //    Console.Write(item + " ");
+            //}
+
+
+            int n = 4;
+
+            /*Pattern 1
+             * * * *
+             * * *
+             * *
+             * 
+            */
+            //RecursionProblems.PrintPatternOne(n, 0);
+            //RecursionProblems.PrintPatternTwo(n, 0);
+            //RecursionProblems.BubbleSortUsingRecursion(nums, nums.Length - 1, 0);
+            RecursionProblems.SelectionSortUsingRecursion(nums, nums.Length, 0,0);
+
+            foreach (var item in nums)
             {
                 Console.Write(item + " ");
             }

@@ -165,4 +165,76 @@ internal class RecursionProblems
         return RoatedBinarySearch(nums, target, start, mid - 1);
     }
 
+    public static void PrintPatternOne(int r ,int c)
+    {
+        if(r==0)
+            return;
+        if(c<r)
+        {
+            Console.Write("*");
+            PrintPatternOne(r,c+1);
+        }
+        else
+        {
+            Console.WriteLine();
+            PrintPatternOne(r-1,0);
+        }
+    }
+
+    public static void PrintPatternTwo(int r, int c)
+    {
+        if (r == 0)
+            return;
+        if (c < r)
+        {
+            PrintPatternTwo(r, c + 1);
+            Console.Write("*");
+        }
+        else
+        {
+            PrintPatternTwo(r - 1, 0);
+            Console.WriteLine();
+        }
+    }
+
+    public static void BubbleSortUsingRecursion(int[] arr, int r, int c)
+    {
+        if (r == 0)
+            return;
+
+        if (c < r)
+        {
+            if (arr[c] > arr[c + 1])
+            {
+                int temp = arr[c];
+                arr[c] = arr[c + 1];
+                arr[c + 1] = temp;
+            }
+            BubbleSortUsingRecursion(arr, r, c + 1);
+        }
+        else
+        {
+            BubbleSortUsingRecursion(arr, r - 1, 0);
+        }
+    }
+
+    public static void SelectionSortUsingRecursion(int[] arr, int r, int c, int max)
+    {
+        if (r == 0)
+            return;
+        if (c < r)
+        {
+            if (arr[c] > arr[max])
+                SelectionSortUsingRecursion(arr, r, c + 1, c);
+            else
+                SelectionSortUsingRecursion(arr, r, c + 1, max);
+        }
+        else
+        {
+            int temp = arr[max];
+            arr[max] = arr[r - 1];
+            arr[r - 1] = temp;
+            SelectionSortUsingRecursion(arr, r - 1, 0, 0);
+        }
+    }
 }
