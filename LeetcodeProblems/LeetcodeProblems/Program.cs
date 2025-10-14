@@ -477,7 +477,10 @@
             //RecursionProblems.PrintPatternOne(n, 0);
             //RecursionProblems.PrintPatternTwo(n, 0);
             //RecursionProblems.BubbleSortUsingRecursion(nums, nums.Length - 1, 0);
-            RecursionProblems.SelectionSortUsingRecursion(nums, nums.Length, 0,0);
+            //RecursionProblems.SelectionSortUsingRecursion(nums, nums.Length, 0,0);
+            nums= new int[] { 4,7,2,9,1,6,3};
+            //nums =RecursionProblems.MergeSortUsingRecursion(nums);
+            RecursionProblems.MergeSortInPlace(nums,0,nums.Length-1);
 
             foreach (var item in nums)
             {

@@ -237,4 +237,96 @@ internal class RecursionProblems
             SelectionSortUsingRecursion(arr, r - 1, 0, 0);
         }
     }
+
+    public static int[] MergeSortUsingRecursion(int[] arr)
+    {
+        if (arr.Length <= 1)
+            return arr;
+
+        int mid = arr.Length / 2;
+        int[] left = MergeSortUsingRecursion(arr[..mid]);
+        int[] right = MergeSortUsingRecursion(arr[mid..]);
+        return MergeTwoSortedArray(left, right);
+    }
+
+    public static int[] MergeTwoSortedArray(int[] left, int[] right)
+    {
+        int[] result = new int[left.Length + right.Length];
+        int i = 0, j = 0, k = 0;
+        while (i < left.Length && j < right.Length)
+        {
+            if (left[i] <= right[j])
+            {
+                result[k++] = left[i++];
+            }
+            else
+            {
+                result[k++] = right[j++];
+            }
+        }
+        while (i < left.Length)
+        {
+            result[k++] = left[i++];
+        }
+        while (j < right.Length)
+        {
+            result[k++] = right[j++];
+        }
+        return result;
+    }
+
+
+    public static void MergeSortInPlace(int[] arr, int s, int e)
+    {
+        if (s < e)
+        {
+            int mid = (s + e) / 2;
+            MergeSortInPlace(arr, s, mid);
+            MergeSortInPlace(arr, mid + 1, e);
+            MergeTwoSortedArrayInPlace(arr, s, mid, e);
+        }
+    }
+
+    private static void MergeTwoSortedArrayInPlace(int[] arr, int s, int mid, int e)
+    {
+        int n1 = mid - s + 1;
+        int n2 = e - mid;
+
+        int[] left = new int[n1];
+        int[] right = new int[n2];
+
+        for (int i = 0; i < n1; i++)
+            left[i] = arr[s + i];
+        for (int j = 0; j < n2; j++)
+            right[j] = arr[mid + 1 + j];
+
+        int firstIndex = 0, secondIndex = 0, currentIndex = s;
+
+        while (firstIndex < n1 && secondIndex < n2)
+        {
+            if (left[firstIndex] <= right[secondIndex])
+            {
+                arr[currentIndex] = left[firstIndex];
+                firstIndex++;
+            }
+            else
+            {
+                arr[currentIndex] = right[secondIndex];
+                secondIndex++;
+            }
+            currentIndex++;
+        }
+        while (firstIndex < n1)
+        {
+            arr[currentIndex] = left[firstIndex];
+            firstIndex++;
+            currentIndex++;
+        }
+        while (secondIndex < n2)
+        {
+            arr[ currentIndex] = right[secondIndex];
+            secondIndex++;
+            currentIndex++;
+        }
+    }
 }
