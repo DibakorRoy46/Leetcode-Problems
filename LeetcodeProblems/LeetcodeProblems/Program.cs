@@ -487,6 +487,17 @@
                 Console.Write(item + " ");
             }
             #endregion
+
+            #region Group Anagrams
+
+            var result= ArrayProblems.GroupAnagramsApprochTwo(new string[] { "bdddddddddd", "bbbbbbbbbbc"  });
+
+            foreach (var item in result)
+            {
+                Console.WriteLine("[" + string.Join(",", item) + "]");
+            }
+
+            #endregion
         }
 
     }
