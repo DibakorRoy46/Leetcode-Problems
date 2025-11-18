@@ -490,12 +490,43 @@
 
             #region Group Anagrams
 
-            var result= ArrayProblems.GroupAnagramsApprochTwo(new string[] { "bdddddddddd", "bbbbbbbbbbc"  });
+            //var result= ArrayProblems.GroupAnagramsApprochTwo(new string[] { "bdddddddddd", "bbbbbbbbbbc"  });
 
-            foreach (var item in result)
-            {
-                Console.WriteLine("[" + string.Join(",", item) + "]");
-            }
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine("[" + string.Join(",", item) + "]");
+            //}
+
+            #endregion
+
+            #region Mejority Element
+
+            //nums=new int[] { 5, 5, 1, 1, 1, 5, 5 };
+
+            //Console.WriteLine(ArrayProblems.MajorityElement(nums));
+
+            #endregion
+
+            #region Design HashMap
+
+
+            MyHashSet myHashSet = new MyHashSet();
+            myHashSet.Add(1); // set = [1]
+            myHashSet.Add(2); // set = [1, 2]
+            myHashSet.Contains(1); // return True
+            myHashSet.Contains(3); // return False, (not found)
+            myHashSet.Add(2); // set = [1, 2]
+            myHashSet.Contains(2); // return True
+            myHashSet.Remove(2); // set = [1]
+            myHashSet.Contains(2); // return False, (already removed)
+
+            #endregion
+
+
+            #region Longest Consecutive Sequence
+
+            nums = new int[] { 0, 3, 7, 2, 5, 8, 4, 6, 0, 1 };
+            Console.Write(ArrayProblems.LongestConsecutive(nums));
 
             #endregion
         }
