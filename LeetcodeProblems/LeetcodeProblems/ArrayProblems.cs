@@ -1,5 +1,7 @@
 ﻿
 
+using System.Collections;
+
 namespace LeetcodeProblems;
 
 public static class ArrayProblems
@@ -136,6 +138,150 @@ public static class ArrayProblems
         }
         return new List<IList<string>>(anagramMap.Values);
     }
+
+    public static int MajorityElement(int[] nums)
+    {
+        int majorityNum = nums[0];
+        int count = 1;
+
+        for (int i = 1; i < nums.Length; i++)
+        {
+            if (nums[i] == majorityNum)
+            {
+                count++;
+            }
+            else
+            {
+                count--;
+            }
+            if (count == 0)
+            {
+                count = 1;
+                majorityNum = nums[i];
+            }
+        }
+
+        count = 0;
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] == majorityNum)
+            {
+                count++;
+            }
+        }
+
+        if (nums.Length / 2 > count)
+        {
+            return majorityNum;
+        }
+        return -1;
+    }
+
+    //0, 3, 7, 2, 5, 8, 4, 6, 0, 1 
+    public static int LongestConsecutive(int[] nums)
+    {
+        HashSet<int> numSet = new HashSet<int>(nums);
+
+        int result = 0;
+
+        foreach (var num in numSet)
+        {
+            int length = 0;
+            if(!numSet.Contains(num-1))
+            {
+                length=1;
+
+                while(numSet.Contains(num+length))
+                {
+                    length++;
+                }
+                result = Math.Max(result, length);
+            }
+        }
+
+        return result;
+    }
+
+    public static int BestTimeToBuyStock(int[] nums)
+    {
+        int result = 0;
+
+        for(int i=1;i<nums.Length;i++)
+        {
+            if(nums[i]> nums[i-1])
+            {
+                result += nums[i] - nums[i - 1];
+            }
+        }
+        return result;
+    }
+
+}
+
+public class MyHashSet
+{
+    List<int> hash;
+    public MyHashSet()
+    {
+        hash = new List<int>();
+    }
+
+    public void Add(int key)
+    {
+        if(!hash.Contains(key))
+            hash.Add(key);
+    }
+    public void Remove(int key)
+    {
+        hash.Remove(key);
+    }
+
+    public bool Contains(int key)
+    {
+        return hash.Contains(key);
+    }
+}
+
+
+public class MyHashMap
+{
+    Dictionary<int, int> map;
+    public MyHashMap()
+    {
+        map = new Dictionary<int, int>();
+    }
+
+    public void Put(int key, int value)
+    {
+        if(map.ContainsKey(key))
+        {
+            map[key] = value;
+        }
+        else
+        {
+            map.Add(key, value);
+        }
+    }
+
+    public int Get(int key)
+    {
+        return map.ContainsKey(key) ? map[key] : -1;
+    }
+
+    public void Remove(int key)
+    {
+        map.Remove(key);
+    }
+}
+
+/**
+ * Your MyHashMap object will be instantiated and called as such:
+ * MyHashMap obj = new MyHashMap();
+ * obj.Put(key,value);
+ * int param_2 = obj.Get(key);
+ * obj.Remove(key);
+ */
 
     public static int MaxOperations(string s)
     {
