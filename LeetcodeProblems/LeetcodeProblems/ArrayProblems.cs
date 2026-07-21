@@ -136,4 +136,30 @@ public static class ArrayProblems
         }
         return new List<IList<string>>(anagramMap.Values);
     }
+
+    public static int MaxOperations(string s)
+    {
+        int result = 0;
+        int firstIndex = -1;
+        char[] array = s.ToArray();
+
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (firstIndex != -1 && array[i] == '0')
+            {
+                char temp = array[i];
+                array[i] = array[firstIndex];
+                array[firstIndex] = temp;
+                firstIndex = -1;
+                result = result==0 ? result+2 : result+1;
+            }
+
+            if (firstIndex == -1 && array[i] == '1')
+            {
+                firstIndex = i;
+            }
+        }
+        return result;
+    }
+
 }
