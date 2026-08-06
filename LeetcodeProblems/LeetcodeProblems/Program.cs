@@ -536,7 +536,7 @@ namespace LeetcodeProblems
             #region 3228.Maximum Number of Operations to Move Ones to the End
 
             string input = "1001101";
-            Console.WriteLine(ArrayProblems.MaxOperations(input));
+            //Console.WriteLine(ArrayProblems.MaxOperations(input));
 
             #endregion
 
@@ -544,6 +544,16 @@ namespace LeetcodeProblems
             nums = new int[] { 1, 0, 1, 1 };
             ContainsDuplicateII containsDuplicateII = new ContainsDuplicateII();
             containsDuplicateII.ContainsNearbyDuplicate(nums,1);
+            #endregion
+
+
+            #region Two SUM
+
+            nums = new int[] { 3,2,4 };
+            int target = 6;
+
+            Console.WriteLine(TwoSum.FindTwoSum_3(nums, target));
+
             #endregion
         }
 

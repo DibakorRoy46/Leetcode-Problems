@@ -273,7 +273,6 @@ public class MyHashMap
     {
         map.Remove(key);
     }
-}
 
 /**
  * Your MyHashMap object will be instantiated and called as such:

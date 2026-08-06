@@ -38,5 +38,34 @@ namespace LeetcodeProblems
 
             return new int[] { -1, -1 }; // Return -1, -1 if no solution is found
         }
+
+        //If Array is Sorted
+        public static int[] FindTwoSum_3(int[] nums, int target)
+        {
+            Array.Sort(nums);
+
+            int firstElement = 0;
+            int secondElement = nums.Length-1;
+
+            for (int j = 1; j < nums.Length; j++)
+            {
+                if (nums[firstElement] + nums[secondElement]==target)
+                {
+                    return new int[] { firstElement, secondElement };   
+                }
+                else if(nums[firstElement] + nums[secondElement] < target)
+                {
+                    firstElement += 1;
+                }
+                else if (nums[firstElement] + nums[secondElement] > target)
+                {
+                    secondElement -= 1;
+                }
+            }
+
+            return new int[] { -1, -1 }; 
+        }
     }
+
+     
 }
