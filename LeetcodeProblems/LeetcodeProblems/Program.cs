@@ -546,13 +546,22 @@ namespace LeetcodeProblems
             containsDuplicateII.ContainsNearbyDuplicate(nums,1);
             #endregion
 
-
             #region Two SUM
 
             nums = new int[] { 3,2,4 };
             int target = 6;
 
             Console.WriteLine(TwoSum.FindTwoSum_3(nums, target));
+
+            #endregion
+
+            #region Valid Anagram
+
+            string firstInput = "anagram";
+            string secInput = "nagaram";
+
+            ValidAnagram.IsAnagram(firstInput, secInput);
+
 
             #endregion
         }
